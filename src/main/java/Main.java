@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 
 import javax.sound.sampled.AudioInputStream;
@@ -49,30 +50,30 @@ class MyListener extends Listener
 				// wrong way to do this? Not too sure at this time.
 				Finger finger = new Finger(point);
 				Finger.Type fingerType = finger.type();
-				System.out.println(fingerType.toString());
+				//System.out.println(fingerType.toString());
 				
 				// Try and determine what type of finger it is that made the gesture. It's 
 				// always going into the thumb case right now for some reason
 				switch(fingerType) {
 				case TYPE_THUMB:
-					System.out.println("Thumb");
-					in = AudioSystem.getAudioInputStream(Main.class.getResource("/c.wav"));
+					//System.out.println("Thumb");
+					in = AudioSystem.getAudioInputStream(new File("D:\\Documents\\programming projects\\VirtualInstrument\\b.wav"));
 					break;
 				case TYPE_INDEX:
-					System.out.println("Index");
-					in = AudioSystem.getAudioInputStream(Main.class.getResource("/c.wav"));
+					//System.out.println("Index");
+					in = AudioSystem.getAudioInputStream(new File("D:\\Documents\\programming projects\\VirtualInstrument\\c.wav"));
 					break;
 				case TYPE_MIDDLE:
-					System.out.println("Middle");
-					in = AudioSystem.getAudioInputStream(Main.class.getResource("/d.wav"));
+					//System.out.println("Middle");
+					in = AudioSystem.getAudioInputStream(new File("D:\\Documents\\programming projects\\VirtualInstrument\\d.wav"));
 					break;
 				case TYPE_RING:
-					System.out.println("Ring");
-					in = AudioSystem.getAudioInputStream(Main.class.getResource("/e.wav"));
+					//System.out.println("Ring");
+					in = AudioSystem.getAudioInputStream(new File("D:\\Documents\\programming projects\\VirtualInstrument\\e.wav"));
 					break;
 				case TYPE_PINKY:
-					System.out.println("Pinky");
-					in = AudioSystem.getAudioInputStream(Main.class.getResource("/f.wav"));
+					//System.out.println("Pinky");
+					in = AudioSystem.getAudioInputStream(new File("D:\\Documents\\programming projects\\VirtualInstrument\\f.wav"));
 					break;
 				default:
 					break;
